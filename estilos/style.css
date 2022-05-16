@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Oooh+Baby&family=Poppins:wght@600&family=Roboto:wght@100&family=Sedgwick+Ave&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  background-color: rgb(240, 234, 158);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+header{
+  font-size: large;
+  display: grid;
+  justify-content: center;
+  background-color: rgb(229, 155, 155);
+}
+
+nav{
+  background-color: rgb(229, 155, 155);
+  justify-content: center;
+  align-items: center;
+}
+nav ul li{
+  list-style: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+a{
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
+
+p{
+  border: 2px solid rgb(229, 155, 155);
+}
+
+img{
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+  
+}
+
+main{
+    padding:auto;
+    margin:auto;
+    text-align: center;
+}
+
+iframe{
+  width: 325px;
+  max-width: 100%;
+  height: fit-content;
+}
+
+/*productos*/
+
+.instrumentos {  
+  justify-items:center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.8fr 0.2fr 1.8fr 0.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cuerda viento"
+    "fig1 fig2"
+    "percusion audio"
+    "fig3 fig4";
+  
+}
+
+.cuerda { grid-area: cuerda; }
+.viento { grid-area: viento; }
+.fig1 { grid-area: fig1; }
+.fig2 { grid-area: fig2; }
+.fig3 { grid-area: fig3; }
+.fig4 { grid-area: fig4; }
+.percusion { grid-area: percusion; }
+.audio { grid-area: audio; }
+
+.cuerda, .viento, .percusion, .audio{
+  height: 300px;
+  border: 5px solid black;
+}
+  
+
+
+footer{
+  text-align: center;
+  padding: 0cm;
+  background-color: rgb(229, 155, 155);
+  margin-top: initial;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main-head{
+  grid-area: header;
+}
+.content{
+  grid-area: contenido;
+}
+.main-nav{
+  grid-area: nav;
+}
+
+ .footer{
+   grid-area: footer;
+ }
+
+.wrapper{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "nav"
+}
+
+@media (min-width:320px){
+  
+  
+  nav ul li{
+    float:inline-start;
+    padding: 5px 5px;
+    margin-left: 1px;
+    margin-right: 5px;
+  }}
+
+  .instrumentos {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.6fr 0.4fr 1.6fr 0.4fr 1.6fr 0.4fr 1.6fr 0.4fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cuerda"
+      "fig1"
+      "viento"
+      "fig2"
+      "percusion"
+      "fig3"
+      "audio"
+      "fig4";
+  }
+  
+  .cuerda { grid-area: cuerda; }
+  .fig2 { grid-area: fig2; }
+  .viento { grid-area: viento; }
+  .fig1 { grid-area: fig1; } 
+  .percusion { grid-area: percusion; }
+  .fig3 { grid-area: fig3; }
+  .audio { grid-area: audio; }
+  .fig4 { grid-area: fig4; }
+
+  .cuerda, .viento, .percusion, .audio{
+    width: 300px;
+    height: 150px;
+    border: 5px solid black;
+  }
+  
+  
+
+@media (min-width:500px){
+  .wrapper{
+    grid-template-areas: 
+    "header"
+    "nav"
+  }
+
+  nav ul li{
+    border: 2px solid rgb(202, 35, 35);
+    float:inline-start;
+    padding: 1px 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  iframe{
+    width: 500px;
+    height: 300px;
+
+  }
+
+  .cuerda, .viento, .percusion, .audio{
+    width: 400px;
+    height: 250px;
+    border: 5px solid black;
+  }}
+
+
+@media (min-width:700px){
+  .wrapper{
+    grid-template-areas:
+    "header"
+    "nav"
+   }
+
+   nav ul li{
+    border: 2px solid rgb(0, 0, 0);
+    float:inline-start;
+    padding: 10px 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  iframe{
+    width: 700px;
+    height: 450px;
+
+  }
+
+  .cuerda, .viento, .percusion, .audio{
+    width: 500px;
+    height: 350px;
+    border: 5px solid black;
+  }
+
+  figcaption{
+      font-size: 20px;
+  }}
+
+  
+
+@media (min-width:920px){
+  .wrapper {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header nav";
+  }
+  
+  header { grid-area: header; }
+  
+  nav {  display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "inicio productos"
+      "ubicacion proveedores"
+      "contacto .";
+    grid-area: nav;
+  }
+  
+  .inicio { grid-area: inicio; }
+  
+  .productos { grid-area: productos; }
+  
+  .ubicacion { grid-area: ubicacion; }
+  
+  .proveedores { grid-area: proveedores; }
+  
+  .contacto { grid-area: contacto; }
+  
+  
+
+    
+  nav ul li{
+    font-size: 13px;
+    border: 2px solid rgb(0, 0, 0)
+    
+  }
+
+
+  iframe{
+    width: 950px;
+    height: 750px;
+
+  }
+
+  .instrumentos {  
+    justify-items:center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.8fr 0.2fr 1.8fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cuerda viento"
+      "fig1 fig2"
+      "percusion audio"
+      "fig3 fig4";
+    
+  }
+  
+  .cuerda { grid-area: cuerda; }
+  .viento { grid-area: viento; }
+  .fig1 { grid-area: fig1; }
+  .fig2 { grid-area: fig2; }
+  .fig3 { grid-area: fig3; }
+  .fig4 { grid-area: fig4; }
+  .percusion { grid-area: percusion; }
+  .audio { grid-area: audio; }
+  
+  .cuerda, .viento, .percusion, .audio{
+    width: 400px;
+    height: 250px;
+    border: 5px solid black;}
+
+  footer{grid-template-columns: 1fr 1fr;
+    grid-template-rows:  0.8fr 1.5fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+    "cont redes"
+    "datos-c datos-r";
+  }
+  .cont { grid-area: cont; }
+  .datos-c { grid-area: datos-c; }
+  .redes { grid-area: redes; }
+  .datos-r { grid-area: datos-r; }
+
+  footer{
+    font-size: 13px;
+}}
+
+
+
+.mapa,
+.dentro,
+.fuera,
+.focusrite,
+.gibson,
+.adam,
+iframe,
+.cuerda,
+.viento,
+.percusion,
+.audio{
+    animation-duration: 2.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.toot:hover,
+.dentro:hover,
+.fuera:hover,
+.focusrite:hover,
+.gibson:hover,
+.adam:hover,
+.cuerda:hover,
+.viento:hover,
+.percusion:hover,
+.audio:hover{
+    transform: rotate(360deg) scale(1) ;
+    transition: all 2s;
+  }
+
+ 
